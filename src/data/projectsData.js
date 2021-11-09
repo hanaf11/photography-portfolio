@@ -6,17 +6,14 @@ import five from '../assets/svg/projects/five.svg'
 import six from '../assets/svg/projects/six.svg'
 import seven from '../assets/svg/projects/seven.svg'
 import eight from '../assets/svg/projects/eight.svg'
-
+import pic1 from '../assets/png/tree.jpg'
 
 export const projectsData = [
     {
         id: 1,
-        projectName: 'Employee Management',
-        projectDesc: 'This project aims to build an employee management system that consolidates all information of a company',
-        tags: ['React', 'CSS', 'Material Ui'],
-        code: 'https://github.com/hhhrrrttt222111/developer-portfolio',
+        projectName: 'Emerald',
         demo: 'https://github.com/hhhrrrttt222111/developer-portfolio',
-        image: one
+        image: pic1
     },
     {
         id: 2,

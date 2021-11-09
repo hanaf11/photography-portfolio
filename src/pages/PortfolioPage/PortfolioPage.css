@@ -37,13 +37,13 @@
 }
 
 .project-container {
-    margin-top: 5rem;
+    margin-top: 10rem;
     width: 100%;
 }
 
 .project-grid {
     display: flex;
-    gap: 4rem; 
+    gap: 2rem; 
 }
 
 @media (min-width: 992px) and (max-width: 1380px) {

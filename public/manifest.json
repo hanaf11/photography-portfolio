@@ -13,9 +13,9 @@
       "sizes": "64x64"
     },
     {
-      "src": "favicon512.png",
+      "src": "favicon.ico",
       "type": "image/png",
-      "sizes": "512x512"
+      "sizes": "64x64"
     }
   ],
   "start_url": ".",

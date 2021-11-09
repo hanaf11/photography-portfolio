@@ -6,7 +6,7 @@ import Fade from 'react-reveal/Fade';
 import placeholder from '../../../assets/png/placeholder.png';
 import './SingleProject.css';
 
-function SingleProject({ id, name, desc, tags, code, demo, image, theme }) {
+function SingleProject({ id, name, demo, image, theme }) {
     const useStyles = makeStyles((t) => ({
         iconBtn: {
             display: 'flex',
@@ -32,6 +32,8 @@ function SingleProject({ id, name, desc, tags, code, demo, image, theme }) {
         },
     }));
 
+
+
     const classes = useStyles();
 
     return (
@@ -39,7 +41,7 @@ function SingleProject({ id, name, desc, tags, code, demo, image, theme }) {
             <div
                 key={id}
                 className='singleProject'
-                style={{ backgroundColor: theme.primary400 }}
+                style={{ backgroundColor: theme.primary100 }}
             >
                 <div className='projectContent'>
                     <h2
@@ -47,10 +49,11 @@ function SingleProject({ id, name, desc, tags, code, demo, image, theme }) {
                         style={{ color: theme.tertiary }}
                     >
                         {name}
-                    </h2>
+                     </h2>
                     <img src={image ? image : placeholder} alt={name} />
-                    <div className='project--showcaseBtn'>
-                        <a
+                 
+                   <div className='project--showcaseBtn'>
+                     {/*}   <a
                             href={demo}
                             target='_blank'
                             rel='noreferrer'
@@ -68,8 +71,8 @@ function SingleProject({ id, name, desc, tags, code, demo, image, theme }) {
                                 className={classes.icon}
                                 aria-label='Demo'
                             />
-                        </a>
-                        <a
+                        </a>/*}
+                       {/*} <a
                             href={code}
                             target='_blank'
                             rel='noreferrer'
@@ -87,10 +90,10 @@ function SingleProject({ id, name, desc, tags, code, demo, image, theme }) {
                                 className={classes.icon}
                                 aria-label='Code'
                             />
-                        </a>
+                                </a>*/}
                     </div>
                 </div>
-                <p
+               {/*} <p
                     className='project--desc'
                     style={{
                         background: theme.secondary,
@@ -98,8 +101,8 @@ function SingleProject({ id, name, desc, tags, code, demo, image, theme }) {
                     }}
                 >
                     {desc}
-                </p>
-                <div
+                </p>*/}
+               {/*} <div
                     className='project--lang'
                     style={{
                         background: theme.secondary,
@@ -109,7 +112,7 @@ function SingleProject({ id, name, desc, tags, code, demo, image, theme }) {
                     {tags.map((tag, id) => (
                         <span key={id}>{tag}</span>
                     ))}
-                </div>
+                    </div>*/}
             </div>
         </Fade>
     );

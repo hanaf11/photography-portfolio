@@ -1,23 +1,25 @@
-import React, { useContext, useState } from 'react'
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 import { Helmet } from 'react-helmet'
 import { Grid } from '@material-ui/core'
 import { Link } from 'react-router-dom'
 import { makeStyles } from '@material-ui/core/styles';
 import { AiOutlineHome } from "react-icons/ai";
-
+import { useContext,useState } from 'react';
 import './PortfolioPage.css'
 import { Navbar, SingleProject } from '../../components';
 import { ThemeContext } from '../../contexts/ThemeContext';
 import { projectsData } from '../../data/projectsData'
 import { headerData } from '../../data/headerData'
+import { GalleryPage } from '../GalleryPage/GalleryPage'
+//import {Footer} from "../../components/Footer/Footer"
 
 function PortfolioPage() {
 
-    const [search, setSearch] = useState('')
+    const [search, setSearch] = useState('');
     const { theme } = useContext(ThemeContext);
 
     const filteredArticles = projectsData.filter((project) => {
-        const content = project.projectName + project.projectDesc + project.tags
+        const content = project.projectName
         return content.toLowerCase().includes(search.toLowerCase())
     })
 
@@ -73,14 +75,14 @@ function PortfolioPage() {
                 <title>{headerData.name} | Projects</title>
             </Helmet>
             <Navbar></Navbar>
-            <div className="projectPage-header" style={{backgroundColor:theme.primary}}>
+          {/*}  <div className="projectPage-header" style={{backgroundColor:theme.primary}}>
                 
                 <h1 style={{color: theme.secondary}}>Projects</h1>
-            </div>
+             </div>*/}
            <div className="projectPage-container">
-               <div className="projectPage-search">
+               {/*<div className="projectPage-search">
                    <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Search project..." className={classes.search} />
-               </div>
+            </div>*/}
                <div className="project-container">
                    <Grid className="project-grid" container direction="row" alignItems="center" justifyContent="center">
                         {filteredArticles.map(project => (
@@ -89,16 +91,26 @@ function PortfolioPage() {
                                 key={project.id}
                                 id={project.id}
                                 name={project.projectName}
-                                desc={project.projectDesc}
-                                tags={project.tags}
-                                code={project.code}
                                 demo={project.demo}
                                 image={project.image} 
                             />
                         ))}
                    </Grid>
                </div>
-           </div>    
+           </div>  
+         {/*}  <Router>
+        
+        <Switch>
+         
+          <Route path="/blog" exact component={BlogPage} />
+          <Route path="/projects" exact component={ProjectPage} />
+        
+          <Route path="/emerald" exact component={GalleryPage} />
+
+          <Redirect to="/" />
+        </Switch>
+         </Router> */}
+          
         </div>
     )
 }

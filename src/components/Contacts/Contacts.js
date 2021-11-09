@@ -10,7 +10,7 @@ import {  FaInstagram} from 'react-icons/fa';
 import { AiOutlineSend, AiOutlineCheckCircle } from 'react-icons/ai';
 import { FiPhone, FiAtSign } from 'react-icons/fi';
 import { HiOutlineLocationMarker } from 'react-icons/hi';
-
+import pic1 from '../../assets/png/tree.jpg'
 import { ThemeContext } from '../../contexts/ThemeContext';
 
 import { socialsData } from '../../data/socialsData';
@@ -162,13 +162,13 @@ function Contacts() {
 
                     <div className='contacts-pictures'>
                         <div className='pics' >
-                            <img src="https://images.unsplash.com/photo-1611267254323-4db7b39c732c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y3V0ZSUyMGNhdHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80"/>
+                            <img src={pic1}/>
                         </div>
                         <div className='pics'>
-                       <img src="https://images.unsplash.com/photo-1611267254323-4db7b39c732c?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8Y3V0ZSUyMGNhdHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&w=1000&q=80"/>
+                       <img src={pic1}/>
                         </div>
                         <div className='pics'>
-                       <img src="../../assets/png/tree.jpg"/>
+                       <img src={pic1}/>
                         </div>
                     </div>
 
