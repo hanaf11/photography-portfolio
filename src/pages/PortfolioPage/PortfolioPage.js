@@ -1,27 +1,72 @@
-import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+import React, { useContext, useState } from 'react'
 import { Helmet } from 'react-helmet'
 import { Grid } from '@material-ui/core'
 import { Link } from 'react-router-dom'
 import { makeStyles } from '@material-ui/core/styles';
 import { AiOutlineHome } from "react-icons/ai";
-import { useContext,useState } from 'react';
+
 import './PortfolioPage.css'
 import { Navbar, SingleProject } from '../../components';
 import { ThemeContext } from '../../contexts/ThemeContext';
 import { projectsData } from '../../data/projectsData'
 import { headerData } from '../../data/headerData'
-import { GalleryPage } from '../GalleryPage/GalleryPage'
-//import {Footer} from "../../components/Footer/Footer"
+import Lightroom from 'react-lightbox-gallery';
 
 function PortfolioPage() {
 
-    const [search, setSearch] = useState('');
+   
     const { theme } = useContext(ThemeContext);
+    const [ images, setImages ] = useState([
+        {
+            src: "https://images.unsplash.com/photo-1508138221679-760a23a2285b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cmFuZG9tfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+            desc: "Person wearing shoes",
+            sub: "Gift Habeshaw"
+        },
+        {
+            src: "https://images.unsplash.com/photo-1485550409059-9afb054cada4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cmFuZG9tfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+            desc: "Blonde woman wearing sunglasses smiling at the camera ",
+            sub: "Dmitriy Frantsev"
+        },
+        {
+            src: "https://images.unsplash.com/photo-1554570731-63bcddda4dcd?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHJhbmRvbXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+            desc: "Man and woman passing by store",
+            sub: "Harry Cunningham"
+        },
+        {
+            src: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHJhbmRvbXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+            desc: "Jaipur , Rajasthan India",
+            sub: "Liam Baldock"
+        },
+        {
+            src: "https://images.unsplash.com/photo-1508138221679-760a23a2285b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cmFuZG9tfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+            desc: "Person wearing shoes",
+            sub: "Gift Habeshaw"
+        },
+        {
+            src: "https://images.unsplash.com/photo-1508138221679-760a23a2285b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cmFuZG9tfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+            desc: "Person wearing shoes",
+            sub: "Gift Habeshaw"
+        },
+        {
+            src: "https://images.unsplash.com/photo-1554570731-63bcddda4dcd?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHJhbmRvbXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+            desc: "Man and woman passing by store",
+            sub: "Harry Cunningham"
+        },
+        {
+            src: "https://images.unsplash.com/photo-1554570731-63bcddda4dcd?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHJhbmRvbXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+            desc: "Man and woman passing by store",
+            sub: "Harry Cunningham"
+        },
+        {
+            src: "https://images.unsplash.com/photo-1554570731-63bcddda4dcd?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHJhbmRvbXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+            desc: "Man and woman passing by store",
+            sub: "Harry Cunningham"
+        },
+    ]
+);
 
-    const filteredArticles = projectsData.filter((project) => {
-        const content = project.projectName
-        return content.toLowerCase().includes(search.toLowerCase())
-    })
+
+   
 
     const useStyles = makeStyles((t) => ({
         search : {
@@ -67,6 +112,15 @@ function PortfolioPage() {
         },
     }));
 
+    const gallerySettings = {
+        columnCount: {
+        default: 3,
+        mobile: 3,
+        tab: 4
+        },
+        mode: "dark"
+    };
+
     const classes = useStyles();
 
     return (
@@ -75,42 +129,15 @@ function PortfolioPage() {
                 <title>{headerData.name} | Projects</title>
             </Helmet>
             <Navbar></Navbar>
-          {/*}  <div className="projectPage-header" style={{backgroundColor:theme.primary}}>
-                
+            <div className="projectPage-header" style={{backgroundColor:theme.primary}}>                
                 <h1 style={{color: theme.secondary}}>Projects</h1>
-             </div>*/}
-           <div className="projectPage-container">
-               {/*<div className="projectPage-search">
-                   <input type="text" value={search} onChange={(e) => setSearch(e.target.value)} placeholder="Search project..." className={classes.search} />
-            </div>*/}
-               <div className="project-container">
-                   <Grid className="project-grid" container direction="row" alignItems="center" justifyContent="center">
-                        {filteredArticles.map(project => (
-                            <SingleProject
-                                theme={theme}
-                                key={project.id}
-                                id={project.id}
-                                name={project.projectName}
-                                demo={project.demo}
-                                image={project.image} 
-                            />
-                        ))}
-                   </Grid>
-               </div>
-           </div>  
-         {/*}  <Router>
-        
-        <Switch>
-         
-          <Route path="/blog" exact component={BlogPage} />
-          <Route path="/projects" exact component={ProjectPage} />
-        
-          <Route path="/emerald" exact component={GalleryPage} />
+            </div>
 
-          <Redirect to="/" />
-        </Switch>
-         </Router> */}
-          
+            <div>
+                <Lightroom images={images} settings={gallerySettings} />
+            </div>
+
+             
         </div>
     )
 }
