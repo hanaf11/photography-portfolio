@@ -155,7 +155,17 @@ function Navbar() {
 
             <div className='navbar'>
             <div className='navbar--container'>
-                <p className="naslov" style={{color:theme.tertiary}}>druid's photos</p>
+            <NavLink
+                                to='/'
+                                smooth={true}
+                                spy='true'
+                                duration={2000}
+                            >
+                               
+                               <p className="naslov" style={{color:theme.tertiary}}>druid's photos</p>
+           
+                            </NavLink>
+                
            
                 <IoMenuSharp
                     className={classes.navMenu}

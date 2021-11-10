@@ -8,6 +8,7 @@ import { ThemeContext } from '../../contexts/ThemeContext';
 import { headerData } from '../../data/headerData';
 import { socialsData } from '../../data/socialsData';
 import { FaInstagram} from 'react-icons/fa';
+import {BsArrowRight} from 'react-icons/bs';
 import {
     FaTwitter,
     FaLinkedin,
@@ -33,6 +34,12 @@ function Landing() {
             fontFamily: 'var(--primaryFont)',
             border: `3px solid ${theme.primary}`,
             transition: '100ms ease-out',
+            display: "flex",
+            flexDirection: "row",
+            alignItems: "center",
+            justifyContent: "space-evenly",
+
+
             '&:hover': {
                 backgroundColor: theme.tertiary,
                 color: theme.secondary,
@@ -116,6 +123,7 @@ function Landing() {
                             >
                                 <Button className={classes.resumeBtn}>
                                     Portfolio
+                                    <BsArrowRight size={25}></BsArrowRight>
                                 </Button>
                             </NavLink>
                         </div>

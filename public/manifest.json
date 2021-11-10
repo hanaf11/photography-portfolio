@@ -1,19 +1,19 @@
 {
-  "short_name": "Developer Portfolio",
-  "name": "Developer Portfolio template by hhhrrrttt222111",
+  "short_name": "Photography Portfolio",
+  "name": "Photography Portfolio - Druid's Photos",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "./favicon_io/favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "favicon.png",
+      "src": "./favicon_io/favicon.ico",
       "type": "image/png",
       "sizes": "64x64"
     },
     {
-      "src": "favicon.ico",
+      "src": "./favicon_io/favicon.ico",
       "type": "image/png",
       "sizes": "64x64"
     }
