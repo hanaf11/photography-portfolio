@@ -3,6 +3,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  width:100%;
 }
 
 .landing--container {
@@ -54,19 +55,18 @@
 }
 
 .landing--social {
-  font-size: 40px;
+  font-size: 30px;
   margin: 0 1rem;
   transition: transform 0.5s;
   border-radius: 50%;
   padding:0.4rem;
+  border: 1px solid white;
   position:relative;
-  top:8rem;
-  border: 2px solid white;
-
+ 
 }
 
 .landing--social:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
 .landing--container-right {
@@ -153,16 +153,14 @@
     align-items: flex-start;
     margin-top: 3rem;
   }
-  .landing--social{
-    top:6rem;
-  }
+  
 }
 
 @media (max-width: 900px) {
 
   .landing--social {
-    font-size: 35px;
-    top:4.5rem;
+    font-size: 30px;
+   
   }
   .lcr--content {
     width: 100%;
@@ -192,9 +190,7 @@
   .lcr-buttonContainer{
     margin-top: 2rem;
   }
-  .landing--social{
-    top:3rem;
-  }
+  
 }
 
 @media (max-width: 600px) {
@@ -208,10 +204,9 @@
     width: 100%;
     height: 30%;
   }
-  .landing--social {
-    top:8rem;
-    right:4rem;
-  }
+.landing--social{
+  font-size: 25px;
+}
   .landing--container-right {
     box-sizing: border-box;
     padding: 0 2rem;
@@ -258,22 +253,17 @@
   .lcr--content {
     margin-top: 35%;
   }
-  .landing--social{
-    right:2.8rem;
-    top:5rem;
-  }
+ 
 }
 @media (max-width: 370px) {
   .lcr--content {
-    margin-top: 60%;
+    margin-top: 0;
   }
   .lcr-buttonContainer{
-    width: 40%;
+    width: 60%;
+   
   }
-  .landing--social{
-    top:2rem;
-    right: 2rem;
-  }
+  
 }
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-device-pixel-ratio: 2) and (device-aspect-ratio: 2/3) {
@@ -286,7 +276,8 @@
     left: 50%;
     top: 20%;
   }
-  .landing--social{
-    right: 1rem;
+  .lcr--content{
+   
   }
+ 
 }

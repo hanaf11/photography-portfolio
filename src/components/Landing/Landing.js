@@ -79,28 +79,13 @@ function Landing() {
         <div className='landing'>
             <div className='landing--container'>
                <div className='container'>
-                    <div className='links'>
-                    
-                        {socialsData.instagram && (
-                            <a
-                                href={socialsData.instagram}
-                                target='_blank'
-                                rel='noreferrer'
-                            >
-                            
-                                <FaInstagram
-                                    className='landing--social'
-                                    style={{ color: theme.primary }}
-                                    aria-label='Instagram'
-                                />
-                            </a>
-                        )}
+                   
                      
                         
                         
                        
                        
-                    </div>
+                 
              
                     
               

@@ -26,14 +26,14 @@ a {
 /* scrollBar */
 
 ::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
+    width: 5px;
+    height: 5px;
 }
 ::-webkit-scrollbar-track {
-    background: #555;
+    background: #555
 }
 ::-webkit-scrollbar-thumb {
-    background: #555;
+    background: rgb(37, 37, 37);
   border-radius: 10px;
   transition: 0.3s;
 }

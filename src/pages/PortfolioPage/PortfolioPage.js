@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { Helmet } from 'react-helmet'
 import { Grid } from '@material-ui/core'
 import { Link } from 'react-router-dom'
@@ -6,11 +6,14 @@ import { makeStyles } from '@material-ui/core/styles';
 import { AiOutlineHome } from "react-icons/ai";
 
 import './PortfolioPage.css'
-import { Navbar, SingleProject } from '../../components';
+import { Footer, Navbar, SingleProject } from '../../components';
+import Footer2 from '../../components/Footer2/Footer2';
 import { ThemeContext } from '../../contexts/ThemeContext';
 import { projectsData } from '../../data/projectsData'
 import { headerData } from '../../data/headerData'
 import Lightroom from 'react-lightbox-gallery';
+import axios from 'axios';
+import { IoMdQrScanner } from 'react-icons/io';
 
 function PortfolioPage() {
 
@@ -64,7 +67,17 @@ function PortfolioPage() {
         },
     ]
 );
-
+useEffect(()=>{
+    axios.get("https://api.flickr.com/services/rest/?method=flickr.photos.getRecent&api_key=c4822dff2dd7850b95dba9803e46809b&per_page=10&format=json&nojsoncallback=1)")
+    .then(res=>{console.log(res);
+    var picArray=res.data.photos.photo.map(pic=>{
+        var srcPath="https://live.staticflickr.com/"+pic.server+"/"+pic.id+"_"+pic.secret+"_"+"z"+".jpg";
+        return(<img alt="nesto" src={srcPath}></img>)
+    })
+  
+    })
+    .catch(err=>console.log(err))
+})
 
    
 
@@ -132,12 +145,12 @@ function PortfolioPage() {
             <div className="projectPage-header" style={{backgroundColor:theme.primary}}>                
                 <h1 style={{color: theme.secondary}}>Projects</h1>
             </div>
-
-            <div>
-                <Lightroom images={images} settings={gallerySettings} />
+            
+            <div className="projectPage-content">
+                <Lightroom className="lightroom" images={images} settings={gallerySettings} />
             </div>
 
-             
+             <Footer2 className="footer-2"></Footer2>
         </div>
     )
 }

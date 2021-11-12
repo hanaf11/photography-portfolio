@@ -4,10 +4,12 @@
     align-items: center;
     justify-content: flex-start;
     min-height: 100vh;
+    width: 100%;
+    
 }
 
 .projectPage-header {
-    height: 35vh;
+    height: 25vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -20,7 +22,7 @@
     font-family: var(--primaryFont);
 }
 
-.projectPage-container {
+/*.projectPage-container {
     padding: 3rem 2rem;
     width: 100%;
     display: flex;
@@ -44,6 +46,16 @@
 .project-grid {
     display: flex;
     gap: 2rem; 
+}*/
+.projectPage-content{
+   width: 100%;
+}
+/*.footer{
+    position: relative;
+    
+}*/
+.lightroom{
+    padding:0;
 }
 
 @media (min-width: 992px) and (max-width: 1380px) {
@@ -81,5 +93,16 @@
     }
     .projectPage-header h1 {
         font-size: 2.5rem;
+    }
+}
+@media screen and (max-width: 330px) {
+    .projectPage-header {
+        height: 20vh;
+    }
+    .projectPage-header h1 {
+        font-size: 2.5rem;
+    }
+    .footer-2{
+        
     }
 }

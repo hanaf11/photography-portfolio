@@ -1,11 +1,11 @@
 import React, { useContext } from 'react'
-import './Footer.css'
+import './Footer2.css'
 import { ThemeContext } from '../../contexts/ThemeContext'
 import { headerData } from '../../data/headerData'
 import {FaInstagram} from 'react-icons/fa'
 import {socialsData} from '../../data/socialsData'
 
-function Footer() {
+function Footer2() {
 
     const shortname = (name) => {
         if(name.length > 10) {
@@ -18,7 +18,7 @@ function Footer() {
     const { theme }  = useContext(ThemeContext)
 
     return (
-        <div className="footer" >
+        <div className="footer2" >
             <p style={{color: theme.tertiary}}>
                 Made with  
                 <span style={{color: theme.primary, margin: '0 0.5rem -1rem 0.5rem'}}>
@@ -26,7 +26,7 @@ function Footer() {
                 </span>
                  by Hana
             </p>
-            <div className='links'>
+            <div className='links2'>
                     
                     {socialsData.instagram && (
                         <a
@@ -47,5 +47,5 @@ function Footer() {
     )
 }
 
-export default Footer
+export default Footer2
 
