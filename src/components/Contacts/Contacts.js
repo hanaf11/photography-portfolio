@@ -12,10 +12,11 @@ import { FiPhone, FiAtSign } from 'react-icons/fi';
 import { HiOutlineLocationMarker } from 'react-icons/hi';
 import pic1 from '../../assets/png/tree.jpg'
 import { ThemeContext } from '../../contexts/ThemeContext';
-
+import Header from '../Header/Header';
 import { socialsData } from '../../data/socialsData';
 import { contactsData } from '../../data/contactsData';
 import './Contacts.css';
+import picture from '../../assets/png/stairs.jpg'
 
 function Contacts() {
     const [open, setOpen] = useState(false);
@@ -39,26 +40,28 @@ function Contacts() {
 
     const useStyles = makeStyles((t) => ({
         input: {
-            border: `4px solid ${theme.primary80}`,
+            border: `2px solid ${theme.primary}`,
             backgroundColor: `${theme.secondary}`,
             color: `${theme.tertiary}`,
             fontFamily: 'var(--primaryFont)',
             fontWeight: 500,
             transition: 'border 0.2s ease-in-out',
             '&:focus': {
-                border: `4px solid ${theme.primary600}`,
+                border: `2px solid ${theme.primary}`,
             },
+            borderRadius:'4px'
         },
         message: {
-            border: `4px solid ${theme.primary80}`,
+            border: `2px solid ${theme.primary}`,
             backgroundColor: `${theme.secondary}`,
             color: `${theme.tertiary}`,
             fontFamily: 'var(--primaryFont)',
             fontWeight: 500,
             transition: 'border 0.2s ease-in-out',
             '&:focus': {
-                border: `4px solid ${theme.primary600}`,
+                border: `2px solid ${theme.primary}`,
             },
+            borderRadius:'4px'
         },
         label: {
             backgroundColor: `${theme.secondary}`,
@@ -156,26 +159,22 @@ function Contacts() {
             id='contacts'
             style={{ backgroundColor: theme.secondary }}
         >
+        <Header title="Contact"/>
             <div className='contacts--container'>
                 
                 <div className='contacts-body'>
 
                     <div className='contacts-pictures'>
                         <div className='pics' >
-                            <img src={pic1}/>
+                            <img src={picture}/>
                         </div>
-                        <div className='pics'>
-                       <img src={pic1}/>
-                        </div>
-                        <div className='pics'>
-                       <img src={pic1}/>
-                        </div>
+                        
                     </div>
 
                     <div className='contacts-form'>
                     
                         <form onSubmit={handleContactForm}>
-                        <h2 style={{ color: theme.primary, fontSize: '3.5rem',fontFamily: 'var(--primaryFont)' }}>Contact</h2>
+                        
                             <div className='input-container'>
                                 <label htmlFor='Name' className={classes.label}>
                                     Name
