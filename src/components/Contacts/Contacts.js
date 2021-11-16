@@ -173,7 +173,7 @@ function Contacts() {
 
                     <div className='contacts-form'>
                     
-                        <form onSubmit={handleContactForm}>
+                        <form name="contact" method="post" data-netlify="true" data-netlify-honeypot="bot-field">
                         
                             <div className='input-container'>
                                 <label htmlFor='Name' className={classes.label}>
