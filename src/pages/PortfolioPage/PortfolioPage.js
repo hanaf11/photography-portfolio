@@ -151,7 +151,7 @@ useEffect(()=>{
               <div className="style-line" style={{backgroundColor: theme.primary}}></div>
             </div>
     </div>*/}
-            <Header></Header>
+            <Header title="Gallery"></Header>
             <div className="projectPage-content">
                 <Lightroom className="lightroom" images={images} settings={gallerySettings} />
             </div>

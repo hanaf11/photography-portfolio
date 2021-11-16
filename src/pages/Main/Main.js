@@ -23,7 +23,7 @@ function Main() {
             <Testimonials />
             <Blog />
             <Contacts />*/}
-            <Footer />
+            <Footer/>
         </div>
     )
 }
