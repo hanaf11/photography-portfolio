@@ -218,6 +218,7 @@ function Contacts() {
                                     type='text'
                                     name='Message'
                                     className={`form-message ${classes.message}`}
+                                    height="50px"
                                 />
                             </div>
 

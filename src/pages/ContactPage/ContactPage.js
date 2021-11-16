@@ -8,11 +8,11 @@ import useWindowDimensions from '../../assets/helpers/windowSizing'
 
 function ContactPage() {
     const {width}=useWindowDimensions();
-    if(width>800){
+    if(width>539){
         return (
             <div>
                 <Helmet>
-                    <title>{headerData.name} - Porfolio</title>
+                    <title>{headerData.name}</title>
                 </Helmet>
     
                 <Navbar />        
@@ -25,7 +25,7 @@ function ContactPage() {
         return (
             <div>
                 <Helmet>
-                    <title>{headerData.name} - Porfolio</title>
+                    <title>{headerData.name}</title>
                 </Helmet>
     
                 <Navbar />        
