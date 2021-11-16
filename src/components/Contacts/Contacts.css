@@ -77,7 +77,13 @@
     resize: none;
 }
 
-
+.submit-link{
+    color:black;
+    
+}
+.submit-link>p{
+    display: inline;
+}
 
 .form-message {
     height: 150px;

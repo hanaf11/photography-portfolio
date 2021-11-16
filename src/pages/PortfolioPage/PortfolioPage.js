@@ -14,6 +14,7 @@ import { headerData } from '../../data/headerData'
 import Lightroom from 'react-lightbox-gallery';
 import axios from 'axios';
 import { IoMdQrScanner } from 'react-icons/io';
+import Header from '../../components/Header/Header'
 
 function PortfolioPage() {
 
@@ -139,13 +140,18 @@ useEffect(()=>{
     return (
         <div className="projectPage" style={{backgroundColor: theme.secondary}}>
             <Helmet>
-                <title>{headerData.name} | Projects</title>
+                <title>{headerData.name} | Portfolio</title>
             </Helmet>
             <Navbar></Navbar>
-            <div className="projectPage-header" style={{backgroundColor:theme.primary}}>                
-                <h1 style={{color: theme.secondary}}>Projects</h1>
+          {/*}  <div className="projectPage-header">                
+                <h1>Gallery</h1>
+                <div className="line-styling">
+              <div className="style-circle" style={{backgroundColor: theme.primary}}></div>
+              <div className="style-circle" style={{backgroundColor: theme.primary}}></div>
+              <div className="style-line" style={{backgroundColor: theme.primary}}></div>
             </div>
-            
+    </div>*/}
+            <Header></Header>
             <div className="projectPage-content">
                 <Lightroom className="lightroom" images={images} settings={gallerySettings} />
             </div>
