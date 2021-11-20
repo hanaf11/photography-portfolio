@@ -31,7 +31,7 @@ function Landing() {
             fontSize: '1rem',
             fontWeight: '500',
             height: '50px',
-            fontFamily: 'var(--primaryFont)',
+            fontFamily: "'Shippori Antique', sans-serif",
             border: `3px solid ${theme.primary}`,
             transition: '100ms ease-out',
             display: "flex",

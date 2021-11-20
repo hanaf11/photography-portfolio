@@ -20,11 +20,7 @@ function Footer() {
     return (
         <div className="footer" >
             <p style={{color: theme.tertiary}}>
-                Made with  
-                <span style={{color: theme.primary, margin: '0 0.5rem -1rem 0.5rem'}}>
-                    ❤
-                </span>
-                 by Hana
+                Made with love by Hana
             </p>
             <div className='links'>
                     

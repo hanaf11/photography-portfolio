@@ -16,6 +16,7 @@ import axios from 'axios';
 import { IoMdQrScanner } from 'react-icons/io';
 import Header from '../../components/Header/Header'
 
+
 function PortfolioPage() {
 
    
@@ -68,8 +69,21 @@ function PortfolioPage() {
         },
     ]
 );
+
+
+/*var oauth = new Flickr.OAuth(
+    process.env.FLICKR_CONSUMER_KEY,
+    process.env.FLICKR_CONSUMER_SECRET
+  );
+
+  oauth.request('http://localhost:3000/oauth/callback').then(function (res) {
+    console.log('yay!', res);
+  }).catch(function (err) {
+    console.error('bonk', err);
+  });*/
+
 useEffect(()=>{
-    axios.get("https://api.flickr.com/services/rest/?method=flickr.photos.getRecent&api_key=c4822dff2dd7850b95dba9803e46809b&per_page=10&format=json&nojsoncallback=1)")
+    /*axios.get("https://api.flickr.com/services/rest/?method=flickr.photos.getRecent&api_key=c4822dff2dd7850b95dba9803e46809b&per_page=10&format=json&nojsoncallback=1)")
     .then(res=>{console.log(res);
     var picArray=res.data.photos.photo.map(pic=>{
         var srcPath="https://live.staticflickr.com/"+pic.server+"/"+pic.id+"_"+pic.secret+"_"+"z"+".jpg";
@@ -77,7 +91,8 @@ useEffect(()=>{
     })
   
     })
-    .catch(err=>console.log(err))
+    .catch(err=>console.log(err))*/
+   
 })
 
    
@@ -151,7 +166,7 @@ useEffect(()=>{
               <div className="style-line" style={{backgroundColor: theme.primary}}></div>
             </div>
     </div>*/}
-            <Header title="Gallery"></Header>
+            <Header title="Portfolio"></Header>
             <div className="projectPage-content">
                 <Lightroom className="lightroom" images={images} settings={gallerySettings} />
             </div>

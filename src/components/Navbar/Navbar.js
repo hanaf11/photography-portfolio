@@ -15,6 +15,7 @@ import {AiOutlineShopping} from 'react-icons/ai';
 import './Navbar.css';
 import { headerData } from '../../data/headerData';
 import { ThemeContext } from '../../contexts/ThemeContext';
+import useWindowDimensions from '../../assets/helpers/windowSizing'
 
 function Navbar() {
     const { theme, setHandleDrawer } = useContext(ThemeContext);
@@ -68,7 +69,7 @@ function Navbar() {
         MuiDrawer: {
             padding: '0em 1.8em',
             width: '14em',
-            fontFamily: ' var(--primaryFont)',
+            fontFamily: 'Shippori Antique',
             fontStyle: ' normal',
             fontWeight: ' normal',
             fontSize: ' 24px',
@@ -123,7 +124,7 @@ function Navbar() {
             },
         },
         drawerLinks: {
-            fontFamily: 'var(--primaryFont)',
+            fontFamily: "'Shippori Antique', sans-serif",
             width: '50%',
             fontSize: '1.3rem',
             fontWeight: 600,
@@ -150,6 +151,280 @@ function Navbar() {
             return name;
         }
     };
+    const {height,width}=useWindowDimensions();
+    if(width>800){
+        return(
+            
+            <div className='navbar'>
+            <div className='navbar--container'>
+            <NavLink
+                                to='/'
+                                smooth={true}
+                                spy='true'
+                                duration={2000}
+                            >
+                               
+                               <p className="naslov" style={{color:theme.tertiary}}>druid's photos</p>
+           
+                            </NavLink>
+
+                            <div className="nav-box">
+
+                <NavLink
+                                to='/'
+                                smooth={true}
+                                spy='true'
+                                duration={2000}
+                            >
+                               {/* <div className={classes.drawerItem}>
+                                    <FaUser className={classes.drawerIcon} */}
+                                    <span className={classes.drawerLinks}>
+                                      Home
+                                    </span>
+                                {/*</div>*/}
+                            </NavLink>
+                 <NavLink
+                                to='/portfolio'
+                                smooth={true}
+                                spy='true'
+                                duration={2000}
+                            >
+                               {/* <div className={classes.drawerItem}>
+                                    <HiDocumentText
+                                        className={classes.drawerIcon}
+                    />*/}
+                                    <span className={classes.drawerLinks}>
+                                        Portfolio
+                                    </span>
+                                {/*</div>*/}
+                </NavLink>
+               
+               
+                            <NavLink
+                                to='/aboutme'
+                                smooth={true}
+                                spy='true'
+                                duration={2000}
+                            >
+                               {/* <div className={classes.drawerItem}>
+                                    <FaUser className={classes.drawerIcon} */}
+                                    <span className={classes.drawerLinks}>
+                                        About
+                                    </span>
+                                {/*</div>*/}
+                            </NavLink>
+                    
+                       
+
+                        
+                            <NavLink
+                                to={{pathname: "https://innaturestudio.picfair.com/"}} target="_blank"
+                                smooth={true}
+                                spy='true'
+                                duration={2000}
+                            >
+                              
+                                {/*   <div className={classes.drawerItem}>
+                                    <BsFillGearFill
+                                        className={classes.drawerIcon}
+                                />*/}
+                                    
+                                    <span className={classes.drawerLinks}>
+                                        Shop
+                                    </span>
+                                {/*</div>*/}
+                            </NavLink>
+                       
+
+                        
+                            <NavLink
+                                to='/contact'
+                                smooth={true}
+                                spy='true'
+                                duration={2000}
+                            >
+                               {/* <div className={classes.drawerItem}>
+                                    <MdPhone className={classes.drawerIcon} />*/}
+                                    <span className={classes.drawerLinks}>
+                                        Contact
+                                    </span>
+                                {/*</div>*/}
+                            </NavLink>
+                 </div>      
+
+
+            </div>
+            </div>
+        )
+    }
+    else{
+        return(
+            <div className='navbar'>
+            <div className='navbar--container'>
+                              <NavLink
+                                to='/'
+                                smooth={true}
+                                spy='true'
+                                duration={2000}
+                            >
+                               
+                               <p className="naslov" style={{color:theme.tertiary}}>druid's photos</p>
+           
+                            </NavLink>
+                
+           
+                <IoMenuSharp
+                    className={classes.navMenu}
+                    onClick={handleDrawerOpen}
+                    aria-label='Menu'
+                />
+
+            <Drawer
+                variant='temporary'
+                onClose={(event, reason) => {
+                    if (reason !== 'backdropClick') {
+                        handleDrawerClose();
+                    } else if (reason !== 'escapeKeyDown') {
+                        handleDrawerClose();
+                    }
+                }}
+                anchor='left'
+                open={open}
+                classes={{ paper: classes.MuiDrawer }}
+                className='drawer'
+                disableScrollLock={true}
+            >
+                <div className='div-closebtn'>
+                    <CloseIcon
+                        onClick={handleDrawerClose}
+                        onKeyDown={(e) => {
+                            if (e.key === ' ' || e.key === 'Enter') {
+                                e.preventDefault();
+                                handleDrawerClose();
+                            }
+                        }}
+                        className={classes.closebtnIcon}
+                        role='button'
+                        tabIndex='0'
+                        aria-label='Close'
+                    />
+                </div>
+                <br />
+
+                <div onClick={handleDrawerClose}>
+                    <div className='navLink--container'>
+                        <Fade left>
+                            <NavLink
+                                to='/'
+                                smooth={true}
+                                spy='true'
+                                duration={2000}
+                            >
+                                <div className={classes.drawerItem}>
+                                    <IoHomeSharp
+                                        className={classes.drawerIcon}
+                                    />
+                                    <span className={classes.drawerLinks}>
+                                        Home
+                                    </span>
+                                </div>
+                            </NavLink>
+                        </Fade>
+
+                        <Fade left>
+                        <NavLink
+                                to='/portfolio'
+                                smooth={true}
+                                spy='true'
+                                duration={2000}
+                            >
+                                <div className={classes.drawerItem}>
+                                    <HiDocumentText
+                                        className={classes.drawerIcon}
+                                    />
+                                    <span className={classes.drawerLinks}>
+                                        Portfolio
+                                    </span>
+                                </div>
+                         </NavLink>
+                       </Fade>
+
+                       <Fade left>
+                            <NavLink
+                                to='/aboutme'
+                                smooth={true}
+                                spy='true'
+                                duration={2000}
+                            >
+                                <div className={classes.drawerItem}>
+                                    <FaUser className={classes.drawerIcon} />
+                                    <span className={classes.drawerLinks}>
+                                        About
+                                    </span>
+                                </div>
+                            </NavLink>
+                        </Fade>
+                       
+
+                        <Fade left>
+                            <NavLink
+                                to={{pathname: "https://innaturestudio.picfair.com/"}} target="_blank"
+                                smooth={true}
+                                spy='true'
+                                duration={2000}
+                            >
+                                <div className={classes.drawerItem}>
+                                    <AiOutlineShopping
+                                        className={classes.drawerIcon}
+                                        style={{fontSize:"2rem"}}
+                                    />
+                                    <span className={classes.drawerLinks}>
+                                        Shop
+                                    </span>
+                                </div>
+                            </NavLink>
+                        </Fade>
+
+                      {/*  <Fade left>
+                            <NavLink
+                                to='/#blog'
+                                smooth={true}
+                                spy='true'
+                                duration={2000}
+                            >
+                                <div className={classes.drawerItem}>
+                                    <FaFolderOpen
+                                        className={classes.drawerIcon}
+                                    />
+                                    <span className={classes.drawerLinks}>
+                                        Blog
+                                    </span>
+                                </div>
+                            </NavLink>
+                      </Fade>*/}
+
+                        <Fade left>
+                            <NavLink
+                                to='/contact'
+                                smooth={true}
+                                spy='true'
+                                duration={2000}
+                            >
+                                <div className={classes.drawerItem}>
+                                    <MdPhone className={classes.drawerIcon} />
+                                    <span className={classes.drawerLinks}>
+                                        Contact
+                                    </span>
+                                </div>
+                            </NavLink>
+                        </Fade>
+                    </div>
+                </div>
+               </Drawer>
+               </div>
+               </div>
+        )
+    }
     
         return(
 
