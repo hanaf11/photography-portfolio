@@ -14,7 +14,40 @@ import { headerData } from '../../data/headerData'
 import Lightroom from 'react-lightbox-gallery';
 import axios from 'axios';
 import { IoMdQrScanner } from 'react-icons/io';
-import Header from '../../components/Header/Header'
+import Header from '../../components/Header/Header';
+import opt3 from "../../assets/png/opt3.jpg";
+import picture from '../../assets/png/stairs.jpg';
+import pic1 from '../../assets/png/1.jpg';
+import pic2 from '../../assets/png/IMG_0997.jpg';
+import pic3 from '../../assets/png/IMG_2215.jpg';
+import pic4 from '../../assets/png/IMG_2305.jpg';
+import pic5 from '../../assets/png/IMG_2841.jpg';
+import pic6 from '../../assets/png/IMG_2995.jpg';
+import pic7 from '../../assets/png/opt1.jpg';
+import pic8 from '../../assets/png/opt2.jpg';
+import pic9 from '../../assets/png/tree.jpg';
+import pic11 from '../../assets/png/pic11.jpg';
+import pic12 from '../../assets/png/pic12.jpg';
+import pic13 from '../../assets/png/pic13.jpg';
+import pic14 from '../../assets/png/pic14.jpg';
+import pic15 from '../../assets/png/pic15.jpg';
+import pic16 from '../../assets/png/pic16.jpg';
+import pic17 from '../../assets/png/pic17.jpg';
+import pic18 from '../../assets/png/pic18.jpg';
+import pic19 from '../../assets/png/pic19.jpg';
+import pic20 from '../../assets/png/pic20.jpg';
+import pic21 from '../../assets/png/pic21.jpg';
+import pic22 from '../../assets/png/pic22.jpg';
+import pic23 from '../../assets/png/pic23.jpg';
+import pic24 from '../../assets/png/pic24.jpg';
+import pic25 from '../../assets/png/pic25.jpg';
+import pic26 from '../../assets/png/pic26.jpg';
+
+
+
+
+
+
 
 
 function PortfolioPage() {
@@ -23,50 +56,142 @@ function PortfolioPage() {
     const { theme } = useContext(ThemeContext);
     const [ images, setImages ] = useState([
         {
-            src: "https://images.unsplash.com/photo-1508138221679-760a23a2285b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cmFuZG9tfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+            src: opt3,
             desc: "Person wearing shoes",
             sub: "Gift Habeshaw"
         },
         {
-            src: "https://images.unsplash.com/photo-1485550409059-9afb054cada4?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8cmFuZG9tfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+            src: picture,
             desc: "Blonde woman wearing sunglasses smiling at the camera ",
             sub: "Dmitriy Frantsev"
         },
         {
-            src: "https://images.unsplash.com/photo-1554570731-63bcddda4dcd?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHJhbmRvbXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+            src: pic1,
             desc: "Man and woman passing by store",
             sub: "Harry Cunningham"
         },
         {
-            src: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fHJhbmRvbXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
-            desc: "Jaipur , Rajasthan India",
+            src: pic2,
             sub: "Liam Baldock"
         },
         {
-            src: "https://images.unsplash.com/photo-1508138221679-760a23a2285b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cmFuZG9tfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+            src: pic3,
             desc: "Person wearing shoes",
             sub: "Gift Habeshaw"
         },
         {
-            src: "https://images.unsplash.com/photo-1508138221679-760a23a2285b?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8cmFuZG9tfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+            src: pic4,
             desc: "Person wearing shoes",
             sub: "Gift Habeshaw"
         },
         {
-            src: "https://images.unsplash.com/photo-1554570731-63bcddda4dcd?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHJhbmRvbXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+            src: pic5,
             desc: "Man and woman passing by store",
             sub: "Harry Cunningham"
         },
         {
-            src: "https://images.unsplash.com/photo-1554570731-63bcddda4dcd?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHJhbmRvbXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+            src: pic6,
             desc: "Man and woman passing by store",
             sub: "Harry Cunningham"
         },
         {
-            src: "https://images.unsplash.com/photo-1554570731-63bcddda4dcd?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fHJhbmRvbXxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+            src: pic18,
             desc: "Man and woman passing by store",
             sub: "Harry Cunningham"
         },
+        {
+            src: pic8,
+            desc: "Man and woman passing by store",
+            sub: "Harry Cunningham"
+        },
+        {
+            src: pic9,
+            desc: "Man and woman passing by store",
+            sub: "Harry Cunningham"
+        },
+        {
+            src: pic11,
+            desc: "Man and woman passing by store",
+            sub: "Harry Cunningham"
+        },
+        {
+            src: pic12,
+            desc: "Man and woman passing by store",
+            sub: "Harry Cunningham"
+        },
+        {
+            src: pic13,
+            desc: "Man and woman passing by store",
+            sub: "Harry Cunningham"
+        },
+        {
+            src: pic14,
+            desc: "Man and woman passing by store",
+            sub: "Harry Cunningham"
+        },
+        {
+            src: pic15,
+            desc: "Man and woman passing by store",
+            sub: "Harry Cunningham"
+        },
+        {
+            src: pic16,
+            desc: "Man and woman passing by store",
+            sub: "Harry Cunningham"
+        },
+        {
+            src: pic17,
+            desc: "Man and woman passing by store",
+            sub: "Harry Cunningham"
+        },
+        {
+            src: pic7,
+            desc: "Man and woman passing by store",
+            sub: "Harry Cunningham"
+        },
+        {
+            src: pic19,
+            desc: "Man and woman passing by store",
+            sub: "Harry Cunningham"
+        },
+        {
+            src: pic25,
+            desc: "Man and woman passing by store",
+            sub: "Harry Cunningham"
+        },
+        {
+            src: pic21,
+            desc: "Man and woman passing by store",
+            sub: "Harry Cunningham"
+        },
+        {
+            src: pic22,
+            desc: "Man and woman passing by store",
+            sub: "Harry Cunningham"
+        },
+        {
+            src: pic23,
+            desc: "Man and woman passing by store",
+            sub: "Harry Cunningham"
+        },
+        {
+            src: pic24,
+            desc: "Man and woman passing by store",
+            sub: "Harry Cunningham"
+        },
+        {
+            src: pic20,
+            desc: "Man and woman passing by store",
+            sub: "Harry Cunningham"
+        },
+
+        {
+            src: pic26,
+            desc: "Man and woman passing by store",
+            sub: "Harry Cunningham"
+        },
+
+
     ]
 );
 
