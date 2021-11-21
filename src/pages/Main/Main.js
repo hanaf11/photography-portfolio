@@ -8,21 +8,12 @@ function Main() {
     return (
         <div>
             <Helmet>
-                <title>{headerData.name} - Porfolio</title>
+                <title>{headerData.name}</title>
+                <meta name="description" content="Nature photography" />
             </Helmet>
 
             <Navbar />        
             <Landing />
-            {/*<About />
-            <Education />
-            <Skills />
-            <Experience />
-            <Projects />
-            <Achievement />
-            <Services />
-            <Testimonials />
-            <Blog />
-            <Contacts />*/}
             <Footer/>
         </div>
     )
