@@ -1,19 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { Helmet } from 'react-helmet'
-import { Grid } from '@material-ui/core'
-import { Link } from 'react-router-dom'
 import { makeStyles } from '@material-ui/core/styles';
-import { AiOutlineHome } from "react-icons/ai";
-
 import './PortfolioPage.css'
-import { Footer, Navbar, SingleProject } from '../../components';
+import { Navbar} from '../../components';
 import Footer2 from '../../components/Footer2/Footer2';
 import { ThemeContext } from '../../contexts/ThemeContext';
-import { projectsData } from '../../data/projectsData'
 import { headerData } from '../../data/headerData'
 import Lightroom from 'react-lightbox-gallery';
-import axios from 'axios';
-import { IoMdQrScanner } from 'react-icons/io';
 import Header from '../../components/Header/Header';
 import opt3 from "../../assets/png/opt3.jpg";
 import picture from '../../assets/png/stairs.jpg';
@@ -59,142 +52,142 @@ function PortfolioPage() {
         {
             src: opt3,
             desc: "Person wearing shoes",
-            sub: "Gift Habeshaw"
+            sub: "druid's photos"
         },
         {
             src: picture,
             desc: "Blonde woman wearing sunglasses smiling at the camera ",
-            sub: "Dmitriy Frantsev"
+            sub: "druid's photos"
         },
         {
             src: pic1,
             desc: "Man and woman passing by store",
-            sub: "Harry Cunningham"
+            sub: "druid's photos"
         },
         {
             src: pic2,
-            sub: "Liam Baldock"
+            sub: "druid's photos"
         },
         {
             src: pic3,
             desc: "Person wearing shoes",
-            sub: "Gift Habeshaw"
+            sub: "druid's photos"
         },
         {
             src: pic4,
             desc: "Person wearing shoes",
-            sub: "Gift Habeshaw"
+            sub: "druid's photos"
         },
         {
             src: pic5,
             desc: "Man and woman passing by store",
-            sub: "Harry Cunningham"
+            sub: "druid's photos"
         },
         {
             src: pic6,
             desc: "Man and woman passing by store",
-            sub: "Harry Cunningham"
+            sub: "druid's photos"
         },
         {
             src: pic19,
             desc: "Man and woman passing by store",
-            sub: "Harry Cunningham"
+            sub: "druid's photos"
         },
         {
             src: pic8,
             desc: "Man and woman passing by store",
-            sub: "Harry Cunningham"
+            sub: "druid's photos"
         },
         {
             src: pic9,
             desc: "Man and woman passing by store",
-            sub: "Harry Cunningham"
+            sub: "druid's photos"
         },
         {
             src: pic11,
             desc: "Man and woman passing by store",
-            sub: "Harry Cunningham"
+            sub: "druid's photos"
         },
         {
             src: pic12,
             desc: "Man and woman passing by store",
-            sub: "Harry Cunningham"
+            sub: "druid's photos"
         },
         {
             src: pic13,
             desc: "Man and woman passing by store",
-            sub: "Harry Cunningham"
+            sub: "druid's photos"
         },
         {
             src: pic14,
             desc: "Man and woman passing by store",
-            sub: "Harry Cunningham"
+            sub: "druid's photos"
         },
         {
             src: pic15,
             desc: "Man and woman passing by store",
-            sub: "Harry Cunningham"
+            sub: "druid's photos"
         },
         {
             src: pic16,
             desc: "Man and woman passing by store",
-            sub: "Harry Cunningham"
+            sub: "druid's photos"
         },
         {
             src: pic17,
             desc: "Man and woman passing by store",
-            sub: "Harry Cunningham"
+            sub: "druid's photos"
         },
         {
             src: pic18,
             desc: "Man and woman passing by store",
-            sub: "Harry Cunningham"
+            sub: "druid's photos"
         },
         {
             src: pic7,
             desc: "Man and woman passing by store",
-            sub: "Harry Cunningham"
+            sub: "druid's photos"
         },
         {
             src: pic25,
             desc: "Man and woman passing by store",
-            sub: "Harry Cunningham"
+            sub: "druid's photos"
         },
         {
             src: pic21,
             desc: "Man and woman passing by store",
-            sub: "Harry Cunningham"
+            sub: "druid's photos"
         },
         {
             src: pic22,
             desc: "Man and woman passing by store",
-            sub: "Harry Cunningham"
+            sub: "druid's photos"
         },
         {
             src: pic23,
             desc: "Man and woman passing by store",
-            sub: "Harry Cunningham"
+            sub: "druid's photos"
         },
         {
             src: pic24,
             desc: "Man and woman passing by store",
-            sub: "Harry Cunningham"
+            sub: "druid's photos"
         },
         {
             src: pic20,
             desc: "Man and woman passing by store",
-            sub: "Harry Cunningham"
+            sub: "druid's photos"
         },
 
         {
             src: pic26,
             desc: "Man and woman passing by store",
-            sub: "Harry Cunningham"
+            sub: "druid's photos"
         },
         {
             src: most,
             desc: "Man and woman passing by store",
-            sub: "Harry Cunningham"
+            sub: "druid's photos"
         },
 
 
@@ -202,29 +195,7 @@ function PortfolioPage() {
 );
 
 
-/*var oauth = new Flickr.OAuth(
-    process.env.FLICKR_CONSUMER_KEY,
-    process.env.FLICKR_CONSUMER_SECRET
-  );
 
-  oauth.request('http://localhost:3000/oauth/callback').then(function (res) {
-    console.log('yay!', res);
-  }).catch(function (err) {
-    console.error('bonk', err);
-  });*/
-
-useEffect(()=>{
-    /*axios.get("https://api.flickr.com/services/rest/?method=flickr.photos.getRecent&api_key=c4822dff2dd7850b95dba9803e46809b&per_page=10&format=json&nojsoncallback=1)")
-    .then(res=>{console.log(res);
-    var picArray=res.data.photos.photo.map(pic=>{
-        var srcPath="https://live.staticflickr.com/"+pic.server+"/"+pic.id+"_"+pic.secret+"_"+"z"+".jpg";
-        return(<img alt="nesto" src={srcPath}></img>)
-    })
-  
-    })
-    .catch(err=>console.log(err))*/
-   
-})
 
    
 
@@ -289,14 +260,7 @@ useEffect(()=>{
                 <title>{headerData.name} | Portfolio</title>
             </Helmet>
             <Navbar></Navbar>
-          {/*}  <div className="projectPage-header">                
-                <h1>Gallery</h1>
-                <div className="line-styling">
-              <div className="style-circle" style={{backgroundColor: theme.primary}}></div>
-              <div className="style-circle" style={{backgroundColor: theme.primary}}></div>
-              <div className="style-line" style={{backgroundColor: theme.primary}}></div>
-            </div>
-    </div>*/}
+       
             <Header title="Portfolio"></Header>
             <div className="projectPage-content">
                 <Lightroom className="lightroom" images={images} settings={gallerySettings} />

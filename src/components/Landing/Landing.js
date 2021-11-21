@@ -9,14 +9,7 @@ import { headerData } from '../../data/headerData';
 import { socialsData } from '../../data/socialsData';
 import { FaInstagram} from 'react-icons/fa';
 import {BsArrowRight} from 'react-icons/bs';
-import {
-    FaTwitter,
-    FaLinkedin,
-    FaGithub,
-    FaYoutube,
-    FaBlogger,
-} from 'react-icons/fa';
-import { IconContext } from 'react-icons/lib';
+
 
 function Landing() {
     const { theme, drawerOpen } = useContext(ThemeContext);
@@ -48,29 +41,9 @@ function Landing() {
             [t.breakpoints.down('sm')]: {
                 width: '180px',
             },
-        },
-        contactBtn: {
-            backgroundColor: theme.primary,
-            color: theme.secondary,
-            borderRadius: '30px',
-            textTransform: 'inherit',
-            textDecoration: 'none',
-            width: '150px',
-            height: '50px',
-            fontSize: '1rem',
-            fontWeight: '500',
-            fontFamily: 'var(--primaryFont)',
-            border: `3px solid ${theme.primary}`,
-            transition: '100ms ease-out',
-            '&:hover': {
-                backgroundColor: theme.secondary,
-                color: theme.tertiary,
-                border: `3px solid ${theme.tertiary}`,
-            },
-            [t.breakpoints.down('sm')]: {
-                display: 'none',
-            },
-        },
+        }
+        
+       
     }));
 
     const classes = useStyles();

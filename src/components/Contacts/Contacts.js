@@ -8,9 +8,6 @@ import {IoLogoFlickr} from 'react-icons/io';
 import {SiTiktok} from 'react-icons/si'
 import {  FaInstagram} from 'react-icons/fa';
 import { AiOutlineSend, AiOutlineCheckCircle } from 'react-icons/ai';
-import { FiPhone, FiAtSign } from 'react-icons/fi';
-import { HiOutlineLocationMarker } from 'react-icons/hi';
-import pic1 from '../../assets/png/tree.jpg'
 import { ThemeContext } from '../../contexts/ThemeContext';
 import Header from '../Header/Header';
 import { socialsData } from '../../data/socialsData';

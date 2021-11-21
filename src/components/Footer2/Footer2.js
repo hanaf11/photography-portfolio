@@ -1,19 +1,12 @@
 import React, { useContext } from 'react'
 import './Footer2.css'
 import { ThemeContext } from '../../contexts/ThemeContext'
-import { headerData } from '../../data/headerData'
 import {FaInstagram} from 'react-icons/fa'
 import {socialsData} from '../../data/socialsData'
 
 function Footer2() {
 
-    const shortname = (name) => {
-        if(name.length > 10) {
-            return name.split(" ")[0]
-        } else {
-            return name
-        }
-    }
+   
 
     const { theme }  = useContext(ThemeContext)
 

@@ -23,14 +23,14 @@ function About() {
                 <div className="about-imgcontainer">
                 <div className="about-img1">
                     <img 
-                        //src={aboutData.image === 1 ? theme.aboutimg1 : theme.aboutimg2}  
+                        
                         src={druga}
                         alt="" 
                     />
                 </div>
                 <div className="about-img2">
                     <img 
-                        //src={aboutData.image === 1 ? theme.aboutimg1 : theme.aboutimg2}  
+                     
                         src={profilna}
                         alt="" 
                     />
