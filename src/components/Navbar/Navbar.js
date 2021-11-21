@@ -18,12 +18,13 @@ import { ThemeContext } from '../../contexts/ThemeContext';
 import useWindowDimensions from '../../assets/helpers/windowSizing'
 
 function Navbar() {
+    const {height,width}=useWindowDimensions();
     const { theme, setHandleDrawer } = useContext(ThemeContext);
 
     const [open, setOpen] = useState(false);
 
-    const [hamburger,setHamburger]=useState(false);
-    //const windowSize=Dimensions.get('window').width;
+   /* const [hamburger,setHamburger]=useState(false);
+    //const windowSize=Dimensions.get('window').width;*/
 
     const handleDrawerOpen = () => {
         setOpen(true);
@@ -35,7 +36,7 @@ function Navbar() {
         setHandleDrawer();
     };
 
-    const showHamburger = ()=>{
+   /* const showHamburger = ()=>{
         if(window.innerWidth>800){
             setHamburger(false);
         }
@@ -43,8 +44,8 @@ function Navbar() {
             setHamburger(true);
         }
     };
-    
-    window.addEventListener("resize", showHamburger);
+    */
+    /*window.addEventListener("resize", showHamburger);*/
     
 
     const useStyles = makeStyles((t) => ({
@@ -63,7 +64,7 @@ function Navbar() {
             [t.breakpoints.down('xs')]: {
                 fontSize: '2rem',
             },
-            display: hamburger? 'flex':'none',
+            display: 'flex',
             marginTop:'1rem'
         },
         MuiDrawer: {
@@ -151,10 +152,10 @@ function Navbar() {
             return name;
         }
     };
-    const {height,width}=useWindowDimensions();
+    
     if(width>800){
         return(
-            
+            /*desktop*/
             <div className='navbar'>
             <div className='navbar--container'>
             <NavLink
@@ -259,6 +260,7 @@ function Navbar() {
     }
     else{
         return(
+            /*mobilni*/
             <div className='navbar'>
             <div className='navbar--container'>
                               <NavLink
