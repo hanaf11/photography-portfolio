@@ -23,6 +23,7 @@
     flex: 0.5;
     width: 100%;
     height: fit-content;
+    padding-top:10px;
 }
 
 .about-description >h2 {
@@ -113,6 +114,9 @@
 }
 
 @media (min-width: 820px) and (max-width: 1020px) {
+  .about-body{
+    padding-top:1rem;
+  }
   .about-description{
     flex:0.8;
   }
@@ -127,6 +131,7 @@
   .about-img1>img {
       width: 280px;
   } 
+
   .about-img2{
     margin-left:-100px;
     margin-top:200px;

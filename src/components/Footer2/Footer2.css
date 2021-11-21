@@ -1,5 +1,6 @@
+
 .footer2 {
-    font-family: 'var(--primaryFont)', sans-serif;
+    /*font-family: 'var(--primaryFont)', sans-serif;*/
     height: 40px;
     width: 100%;
     display: flex;
@@ -7,13 +8,13 @@
     align-items: center;
     position: relative;
     bottom: 0;
-    background-color: rgba(20, 20, 20, 0.5);
+    background-color: rgba(0, 0, 0, 0.97);
     
 }
 
 .footer2 p {
-    font-weight: 500;
-    font-family: var(--primaryFont);
+    font-weight: 200;
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 18px;
 }
 
