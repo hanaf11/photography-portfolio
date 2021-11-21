@@ -42,6 +42,7 @@ import pic23 from '../../assets/png/pic23.jpg';
 import pic24 from '../../assets/png/pic24.jpg';
 import pic25 from '../../assets/png/pic25.jpg';
 import pic26 from '../../assets/png/pic26.jpg';
+import most from '../../assets/png/most.jpg'
 
 
 
@@ -95,7 +96,7 @@ function PortfolioPage() {
             sub: "Harry Cunningham"
         },
         {
-            src: pic18,
+            src: pic19,
             desc: "Man and woman passing by store",
             sub: "Harry Cunningham"
         },
@@ -145,12 +146,12 @@ function PortfolioPage() {
             sub: "Harry Cunningham"
         },
         {
-            src: pic7,
+            src: pic18,
             desc: "Man and woman passing by store",
             sub: "Harry Cunningham"
         },
         {
-            src: pic19,
+            src: pic7,
             desc: "Man and woman passing by store",
             sub: "Harry Cunningham"
         },
@@ -187,6 +188,11 @@ function PortfolioPage() {
 
         {
             src: pic26,
+            desc: "Man and woman passing by store",
+            sub: "Harry Cunningham"
+        },
+        {
+            src: most,
             desc: "Man and woman passing by store",
             sub: "Harry Cunningham"
         },
