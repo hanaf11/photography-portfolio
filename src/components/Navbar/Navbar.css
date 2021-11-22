@@ -2,7 +2,7 @@
     height: 3rem;
     position: absolute;
     background-color: rgba(20, 20, 20, 0.4);
-    z-index: 99;
+    z-index: 1;
     display: flex;
     align-items: center;
     justify-content: center;
