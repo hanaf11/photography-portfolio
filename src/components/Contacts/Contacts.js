@@ -170,7 +170,7 @@ function Contacts() {
 
                     <div className='contacts-form'>
                     
-                        <form name="contact" method="post" netlify netlify-honeypot="bot-field"  hidden>
+                        <form name="contact" method="post" action="/contact">
                             <input type="hidden" name="form-name" value="contact" />
                             <div className='input-container'>
                                 <label htmlFor='Name' className={classes.label}>
