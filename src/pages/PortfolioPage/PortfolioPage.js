@@ -51,142 +51,143 @@ function PortfolioPage() {
     const [ images, setImages ] = useState([
         {
             src: opt3,
-            desc: "Person wearing shoes",
+            desc: "Nature photography",
             sub: "druid's photos"
         },
         {
             src: picture,
-            desc: "Blonde woman wearing sunglasses smiling at the camera ",
+            desc: "Nature photography",
             sub: "druid's photos"
         },
         {
             src: pic1,
-            desc: "Man and woman passing by store",
+            desc: "Nature photography",
             sub: "druid's photos"
         },
         {
             src: pic2,
+            desc: "Nature photography",
             sub: "druid's photos"
         },
         {
             src: pic3,
-            desc: "Person wearing shoes",
+            desc: "Nature photography",
             sub: "druid's photos"
         },
         {
             src: pic4,
-            desc: "Person wearing shoes",
+            desc: "Nature photography",
             sub: "druid's photos"
         },
         {
             src: pic5,
-            desc: "Man and woman passing by store",
+            desc: "Nature photography",
             sub: "druid's photos"
         },
         {
             src: pic6,
-            desc: "Man and woman passing by store",
+            desc: "Nature photography",
             sub: "druid's photos"
         },
         {
             src: pic19,
-            desc: "Man and woman passing by store",
+            desc: "Nature photography",
             sub: "druid's photos"
         },
         {
             src: pic8,
-            desc: "Man and woman passing by store",
+            desc: "Nature photography",
             sub: "druid's photos"
         },
         {
             src: pic9,
-            desc: "Man and woman passing by store",
+            desc: "Nature photography",
             sub: "druid's photos"
         },
         {
             src: pic11,
-            desc: "Man and woman passing by store",
+            desc: "Nature photography",
             sub: "druid's photos"
         },
         {
             src: pic12,
-            desc: "Man and woman passing by store",
+            desc: "Nature photography",
             sub: "druid's photos"
         },
         {
             src: pic13,
-            desc: "Man and woman passing by store",
+            desc: "Nature photography",
             sub: "druid's photos"
         },
         {
             src: pic14,
-            desc: "Man and woman passing by store",
+            desc: "Nature photography",
             sub: "druid's photos"
         },
         {
             src: pic15,
-            desc: "Man and woman passing by store",
+            desc: "Nature photography",
             sub: "druid's photos"
         },
         {
             src: pic16,
-            desc: "Man and woman passing by store",
+            desc: "Nature photography",
             sub: "druid's photos"
         },
         {
             src: pic17,
-            desc: "Man and woman passing by store",
+            desc: "Nature photography",
             sub: "druid's photos"
         },
         {
             src: pic18,
-            desc: "Man and woman passing by store",
+            desc: "Nature photography",
             sub: "druid's photos"
         },
         {
             src: pic7,
-            desc: "Man and woman passing by store",
+            desc: "Nature photography",
             sub: "druid's photos"
         },
         {
             src: pic25,
-            desc: "Man and woman passing by store",
+            desc: "Nature photography",
             sub: "druid's photos"
         },
         {
             src: pic21,
-            desc: "Man and woman passing by store",
+            desc: "Nature photography",
             sub: "druid's photos"
         },
         {
             src: pic22,
-            desc: "Man and woman passing by store",
+            desc: "Nature photography",
             sub: "druid's photos"
         },
         {
             src: pic23,
-            desc: "Man and woman passing by store",
+            desc: "Nature photography",
             sub: "druid's photos"
         },
         {
             src: pic24,
-            desc: "Man and woman passing by store",
+            desc: "Nature photography",
             sub: "druid's photos"
         },
         {
             src: pic20,
-            desc: "Man and woman passing by store",
+            desc: "Nature photography",
             sub: "druid's photos"
         },
 
         {
             src: pic26,
-            desc: "Man and woman passing by store",
+            desc: "Nature photography",
             sub: "druid's photos"
         },
         {
             src: most,
-            desc: "Man and woman passing by store",
+            desc: "Nature photography",
             sub: "druid's photos"
         },
 
