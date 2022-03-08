@@ -8,38 +8,6 @@ import { ThemeContext } from '../../contexts/ThemeContext';
 import { headerData } from '../../data/headerData'
 import Lightroom from 'react-lightbox-gallery';
 import Header from '../../components/Header/Header';
-import opt3 from "../../assets/png/opt3.jpg";
-import picture from '../../assets/png/stairs.jpg';
-import pic1 from '../../assets/png/1.jpg';
-import pic2 from '../../assets/png/IMG_0997.jpg';
-import pic3 from '../../assets/png/IMG_2215.jpg';
-import pic4 from '../../assets/png/IMG_2305.jpg';
-import pic5 from '../../assets/png/IMG_2841.jpg';
-import pic6 from '../../assets/png/IMG_2995.jpg';
-import pic7 from '../../assets/png/opt1.jpg';
-import pic8 from '../../assets/png/opt2.jpg';
-import pic9 from '../../assets/png/tree.jpg';
-import pic11 from '../../assets/png/pic11.jpg';
-import pic12 from '../../assets/png/pic12.jpg';
-import pic13 from '../../assets/png/pic13.jpg';
-import pic14 from '../../assets/png/pic14.jpg';
-import pic15 from '../../assets/png/pic15.jpg';
-import pic16 from '../../assets/png/pic16.jpg';
-import pic17 from '../../assets/png/pic17.jpg';
-import pic18 from '../../assets/png/pic18.jpg';
-import pic19 from '../../assets/png/pic19.jpg';
-import pic20 from '../../assets/png/pic20.jpg';
-import pic21 from '../../assets/png/pic21.jpg';
-import pic22 from '../../assets/png/pic22.jpg';
-import pic23 from '../../assets/png/pic23.jpg';
-import pic24 from '../../assets/png/pic24.jpg';
-import pic25 from '../../assets/png/pic25.jpg';
-import pic26 from '../../assets/png/pic26.jpg';
-import most from '../../assets/png/most.jpg'
-
-
-
-
 
 
 
@@ -48,152 +16,7 @@ function PortfolioPage() {
 
    
     const { theme } = useContext(ThemeContext);
-    const [ images, setImages ] = useState([
-        {
-            src: opt3,
-            desc: "Nature photography",
-            sub: "druid's photos"
-        },
-        {
-            src: picture,
-            desc: "Nature photography",
-            sub: "druid's photos"
-        },
-        {
-            src: pic1,
-            desc: "Nature photography",
-            sub: "druid's photos"
-        },
-        {
-            src: pic2,
-            desc: "Nature photography",
-            sub: "druid's photos"
-        },
-        {
-            src: pic3,
-            desc: "Nature photography",
-            sub: "druid's photos"
-        },
-        {
-            src: pic4,
-            desc: "Nature photography",
-            sub: "druid's photos"
-        },
-        {
-            src: pic5,
-            desc: "Nature photography",
-            sub: "druid's photos"
-        },
-        {
-            src: pic6,
-            desc: "Nature photography",
-            sub: "druid's photos"
-        },
-        {
-            src: pic19,
-            desc: "Nature photography",
-            sub: "druid's photos"
-        },
-        {
-            src: pic8,
-            desc: "Nature photography",
-            sub: "druid's photos"
-        },
-        {
-            src: pic9,
-            desc: "Nature photography",
-            sub: "druid's photos"
-        },
-        {
-            src: pic11,
-            desc: "Nature photography",
-            sub: "druid's photos"
-        },
-        {
-            src: pic12,
-            desc: "Nature photography",
-            sub: "druid's photos"
-        },
-        {
-            src: pic13,
-            desc: "Nature photography",
-            sub: "druid's photos"
-        },
-        {
-            src: pic14,
-            desc: "Nature photography",
-            sub: "druid's photos"
-        },
-        {
-            src: pic15,
-            desc: "Nature photography",
-            sub: "druid's photos"
-        },
-        {
-            src: pic16,
-            desc: "Nature photography",
-            sub: "druid's photos"
-        },
-        {
-            src: pic17,
-            desc: "Nature photography",
-            sub: "druid's photos"
-        },
-        {
-            src: pic18,
-            desc: "Nature photography",
-            sub: "druid's photos"
-        },
-        {
-            src: pic7,
-            desc: "Nature photography",
-            sub: "druid's photos"
-        },
-        {
-            src: pic25,
-            desc: "Nature photography",
-            sub: "druid's photos"
-        },
-        {
-            src: pic21,
-            desc: "Nature photography",
-            sub: "druid's photos"
-        },
-        {
-            src: pic22,
-            desc: "Nature photography",
-            sub: "druid's photos"
-        },
-        {
-            src: pic23,
-            desc: "Nature photography",
-            sub: "druid's photos"
-        },
-        {
-            src: pic24,
-            desc: "Nature photography",
-            sub: "druid's photos"
-        },
-        {
-            src: pic20,
-            desc: "Nature photography",
-            sub: "druid's photos"
-        },
-
-        {
-            src: pic26,
-            desc: "Nature photography",
-            sub: "druid's photos"
-        },
-        {
-            src: most,
-            desc: "Nature photography",
-            sub: "druid's photos"
-        },
-
-
-    ]
-);
+    const [images,setImages]=useState([]);
 
 
 
@@ -254,6 +77,22 @@ function PortfolioPage() {
     };
 
     const classes = useStyles();
+    var srcPath;
+    useEffect(()=>{
+        fetch("https://www.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=7562dc5b557045423eef5cd169a6a407&photoset_id=72157720067007893&user_id=194247040%40N07&format=json&nojsoncallback=1")
+        .then(function(response){ return response.json();})
+        .then(function(json){
+            var slike=[];
+            var slikeNiz=json.photoset.photo.map((pic)=>{
+            srcPath="https://farm"+pic.farm+".staticflickr.com/"+pic.server+"/"+pic.id+"_"+pic.secret+".jpg";
+            //console.log(srcPath);
+            slike.push({src:srcPath,desc:"Nature Photography",sub:"druid's photos"});
+            });
+            
+         setImages(slike);
+        
+        })
+    });
 
     return (
         <div className="projectPage" style={{backgroundColor: theme.secondary}}>
@@ -264,8 +103,9 @@ function PortfolioPage() {
        
             <Header title="Portfolio"></Header>
             <div className="projectPage-content">
-                <Lightroom className="lightroom" images={images} settings={gallerySettings} />
+            <Lightroom className="lightroom" images={images} settings={gallerySettings} />
             </div>
+
 
              <Footer2 className="footer-2"></Footer2>
         </div>

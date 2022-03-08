@@ -51,11 +51,8 @@ This is a website about my photography hobby. Here you can see some of my pictur
 
 
 
+Template from [Hemanth R](https://github.com/hhhrrrttt222111)
 
+   
 
-     <p>Template from:
-      <a href="https://github.com/hhhrrrttt222111">Hemanth R</a>
-      </p>
-            
-
-<p>November 21st 2021</p>
+<p>November 2021</p>
